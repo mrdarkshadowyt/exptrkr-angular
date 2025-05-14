@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense Tracker App</title>
+ <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  <nav>
+    <a href="#" onclick="showPage('home')">Home</a>
+    <a href="#" onclick="showPage('add')">Add Expense</a>
+    <a href="#" onclick="showPage('summary')">Summary</a>
+    <a href="#" onclick="showPage('remove')">Remove Expense</a>
+  </nav>
+
+  <div class="container">
+    <section id="home" class="active">
+      <h2>Welcome to Expense Tracker</h2>
+      <p>This simple app helps you manage your daily expenses. Use the navigation bar to add, view, and remove your expenses. Stay in control of your spending!</p>
+    </section>
+
+    <section id="add">
+      <h2>Add Expense</h2>
+      <input type="text" id="desc" placeholder="Description">
+      <input type="number" id="amount" placeholder="Amount">
+      <input type="date" id="date">
+      <button onclick="addExpense()">Add</button>
+    </section>
+
+    <section id="summary">
+      <h2>Summary</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Description</th>
+            <th>Amount</th>
+            <th>Date</th>
+          </tr>
+        </thead>
+        <tbody id="summaryList"></tbody>
+      </table>
+    </section>
+
+    <section id="remove">
+      <h2>Remove Expense</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Description</th>
+            <th>Amount</th>
+            <th>Date</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="removeList"></tbody>
+      </table>
+    </section>
+  </div>
+ <script src="script.js"></script>
+
+</body>
+</html>
